@@ -4,7 +4,7 @@ import os
 import requests
 import psutil
 
-BOT_TOKEN = "7977196875:AAEQSb_uHW1XJma49sN4CdaMB1YuBJtjqMo"
+BOT_TOKEN = ""
 
 # ----- Server / Provider Info -----
 def detect_provider_env():
