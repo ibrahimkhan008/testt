@@ -1,8 +1,8 @@
-from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import os
 import requests
 import psutil
+from telegram import Update
+from telegram.ext import Application, CommandHandler, ContextTypes
 
 BOT_TOKEN = "7977196875:AAEQSb_uHW1XJma49sN4CdaMB1YuBJtjqMo"
 
@@ -78,7 +78,7 @@ async def info(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # ----- Run Bot -----
 if __name__ == "__main__":
-    app = ApplicationBuilder().token(BOT_TOKEN).build()
+    app = Application.builder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("info", info))
     print("Bot is running...")
     app.run_polling()
